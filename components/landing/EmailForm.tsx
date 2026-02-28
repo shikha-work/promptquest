@@ -55,8 +55,8 @@ export function EmailForm({ formNumber }: EmailFormProps) {
 
   if (success) {
     return (
-      <div className="max-w-md mx-auto p-6 bg-success/20 border-2 border-success rounded-xl animate-in fade-in">
-        <p className="text-white font-semibold text-center">
+      <div className="max-w-md mx-auto p-6 bg-[#22C55E]/20 border-2 border-[#22C55E] rounded-xl animate-in fade-in duration-500">
+        <p className="text-white font-semibold text-center text-lg">
           🎉 You're on the list! Check your email for early access details.
         </p>
       </div>
@@ -73,17 +73,21 @@ export function EmailForm({ formNumber }: EmailFormProps) {
           onChange={(e) => setEmail(e.target.value)}
           required
           disabled={loading}
-          className="flex-1 h-14 px-6 text-base bg-white/95 border-2 border-white/30 focus:border-success"
+          className="flex-1 h-14 px-6 text-base bg-white/95 text-gray-900 border-2 border-white/30 rounded-xl focus:border-[#22C55E] focus:ring-4 focus:ring-[#22C55E]/20 transition-all placeholder:text-gray-500"
         />
         <Button
           type="submit"
           disabled={loading}
-          className="h-14 px-8 bg-success hover:bg-success-dark text-white font-bold"
+          className="h-14 px-8 bg-[#22C55E] hover:bg-[#16A34A] text-white font-bold text-base rounded-xl shadow-xl hover:shadow-2xl transition-all hover:scale-105 active:scale-95 whitespace-nowrap"
         >
           {loading ? 'Submitting...' : formNumber === 1 ? 'Join Waitlist' : 'Get Access'}
         </Button>
       </div>
-      {error && <p className="mt-3 text-sm text-warning text-center">{error}</p>}
+      {error && (
+        <p className="mt-3 text-sm text-[#FBBF24] text-center font-medium">
+          {error}
+        </p>
+      )}
     </form>
   )
 }
