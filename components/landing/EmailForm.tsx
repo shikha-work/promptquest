@@ -95,7 +95,7 @@ export function EmailForm({ formNumber }: EmailFormProps) {
           disabled={loading}
           className="h-14 px-8 bg-[#00C36C] hover:bg-[#00994F] text-white font-bold"
         >
-          {loading ? 'Submitting...' : formNumber === 1 ? 'Join Waitlist' : 'Get Access'}
+          {loading ? 'Submitting...' : formNumber === 1 ? 'Join Waitlist(Free)' : 'Get Access(Free)'}
         </Button>
       </div>
       {error && <p className="mt-3 text-sm text-warning text-center">{error}</p>}
