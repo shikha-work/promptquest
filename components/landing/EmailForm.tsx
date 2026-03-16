@@ -93,7 +93,7 @@ export function EmailForm({ formNumber }: EmailFormProps) {
         <Button
           type="submit"
           disabled={loading}
-          className="h-14 px-8 bg-success hover:bg-success-dark text-white font-bold"
+          className="h-14 px-8 bg-[#00C36C] hover:bg-[#00994F] text-white font-bold"
         >
           {loading ? 'Submitting...' : formNumber === 1 ? 'Join Waitlist' : 'Get Access'}
         </Button>
