@@ -88,7 +88,7 @@ export function EmailForm({ formNumber }: EmailFormProps) {
           onChange={(e) => setEmail(e.target.value)}
           required
           disabled={loading}
-          className="flex-1 h-14 px-6 text-base bg-white/95 border-2 border-white/30 focus:border-success"
+          className="flex-1 h-14 px-6 text-base text-black bg-white/95 border-2 border-white/30 focus:border-success"
         />
         <Button
           type="submit"
