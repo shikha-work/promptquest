@@ -14,10 +14,58 @@ export function EmailForm({ formNumber }: EmailFormProps) {
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState('')
 
+  const isValidEmail = (email: string) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return regex.test(email)
+  }
+
+  const isLikelyRealDomain = (email: string) => {
+    const domain = email.split('@')[1]?.toLowerCase() ?? ''
+    if (!domain || !domain.includes('.')) return false
+
+    const [name, ...rest] = domain.split('.')
+    const tld = rest.join('.')
+
+    // common TLD set; fallback for custom/rare TLDs
+    const knownTLDs = new Set(['com', 'net', 'org', 'io', 'co', 'gov', 'edu', 'us', 'uk', 'ca', 'de', 'fr', 'in', 'app'])
+    if (!knownTLDs.has(tld) && !knownTLDs.has(rest.pop() ?? '')) {
+      // Allow non-known TLDs sometimes, but still apply heuristics
+    }
+
+    if (name.length < 2 || name.length > 63) return false
+    if (!/^[a-z0-9\-]+$/.test(name)) return false
+    if (name.startsWith('-') || name.endsWith('-')) return false
+
+    const cleaned = name.replace(/-/g, '')
+    const vowelCount = (cleaned.match(/[aeiou]/g) || []).length
+    const consonantCount = (cleaned.match(/[bcdfghjklmnpqrstvwxyz]/g) || []).length
+
+    // likely random gibberish examples (very long consonant runs, no vowels)
+    if (vowelCount === 0 && cleaned.length > 7) return false
+    if (consonantCount > 0 && consonantCount / Math.max(1, cleaned.length) > 0.85) return false
+    if (/(?:dhkjhdkjdh|kjhdkj|asdfgh)/.test(name)) return false
+
+    const longConsonants = cleaned.match(/(?:[bcdfghjklmnpqrstvwxyz]{6,})/)
+    if (longConsonants) return false
+
+    return true
+  }
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    setLoading(true)
     setError('')
+
+    if (!isValidEmail(email)) {
+      setError('Please enter a valid email address.')
+      return
+    }
+
+    if (!isLikelyRealDomain(email)) {
+      setError('Please enter a valid email address.')
+      return
+    }
+
+    setLoading(true)
 
     try {
       // const response = await fetch('https://connect.mailerlite.com/api/subscribers', {
