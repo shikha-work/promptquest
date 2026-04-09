@@ -4,7 +4,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#6366F1] via-[#4F46E5] to-[#4338CA] text-white py-16 md:py-24 px-4 overflow-hidden">
+      <section className="relative bg-linear-to-br from-[#6366F1] via-[#4F46E5] to-[#4338CA] text-white py-16 md:py-24 px-4 overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute top-20 left-10 w-64 h-64 bg-[#22C55E] rounded-full opacity-10 blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#4F46E5] rounded-full opacity-10 blur-3xl"></div>
@@ -87,7 +87,7 @@ export default function LandingPage() {
       </section>
 
       {/* Challenge Preview Section */}
-      <section className="py-16 md:py-24 px-4 bg-gradient-to-br from-gray-50 to-gray-100">
+      <section className="py-16 md:py-24 px-4 bg-linear-to-br from-gray-50 to-gray-100">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-black text-center mb-12 md:mb-20 text-gray-900">
             Try a Sample Challenge
@@ -136,7 +136,7 @@ export default function LandingPage() {
             </div>
 
             {/* Points Badge */}
-            <div className="inline-block px-6 py-3 bg-gradient-to-r from-[#FBBF24] to-[#F59E0B] text-gray-900 rounded-xl font-bold text-base shadow-md">
+            <div className="inline-block px-6 py-3 bg-linear-to-r from-[#FBBF24] to-[#F59E0B] text-gray-900 rounded-xl font-bold text-base shadow-md">
               ⭐ 100 Points + Bonuses
             </div>
           </div>
@@ -148,7 +148,7 @@ export default function LandingPage() {
       </section>
 
       {/* Bottom CTA Section */}
-      <section className="relative bg-gradient-to-br from-[#6366F1] via-[#4F46E5] to-[#4338CA] text-white py-16 md:py-24 px-4 overflow-hidden">
+      <section className="relative bg-linear-to-br from-[#6366F1] via-[#4F46E5] to-[#4338CA] text-white py-16 md:py-24 px-4 overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute top-20 left-10 w-64 h-64 bg-[#22C55E] rounded-full opacity-10 blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#4F46E5] rounded-full opacity-10 blur-3xl"></div>
