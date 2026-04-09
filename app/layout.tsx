@@ -13,22 +13,43 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Prompt Quest - Master AI Prompting with Daily Challenges",
+  title: "PromptQuest",
   description: "Prompt Quest is a gamified platform to master AI prompting skills. Join daily challenges, track your progress, and level up your ChatGPT, Claude, and Midjourney expertise. Sign up for early access!",
-};
+
+  // PWA Configuration
+  manifest: '/manifest.json',
+  themeColor: '#6366f1',
+  
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'PromptQuest',
+  },
+  
+  icons: {
+    icon: [
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
+  
+  // For better mobile experience
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  },
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
-  );
+  )
 }
