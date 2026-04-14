@@ -22,12 +22,12 @@ export default function LandingPage() {
 
           {/* Main Headline */}
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight tracking-tight">
-            Master AI, One Prompt at a Time
+            Master AI, with a gamified version to learn prompting.
           </h2>
 
           {/* Tagline */}
           <p className="text-xl md:text-2xl mb-10 opacity-95 font-medium max-w-3xl mx-auto">
-            Level up your ChatGPT, Claude, and Midjourney skills with gamified daily challenges
+            Level up your ChatGPT, Claude, and Midjourney skills with gamified challenges
           </p>
 
           {/* Email Form */}
@@ -54,10 +54,10 @@ export default function LandingPage() {
             <div className="bg-white p-8 md:p-10 rounded-2xl border border-gray-200 hover:border-[#6366F1] hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
               <div className="text-5xl md:text-6xl mb-6">🎮</div>
               <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
-                Daily Challenges
+                Daily Bonus Challenges
               </h3>
               <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-                New prompting challenges every day. Build your skills one quest at a time with structured, progressive difficulty.
+                Prompting challenges to build your skills gradually and consistently with new puzzles across text, image, code, and creative prompting.
               </p>
             </div>
 
@@ -65,7 +65,7 @@ export default function LandingPage() {
             <div className="bg-white p-8 md:p-10 rounded-2xl border border-gray-200 hover:border-[#6366F1] hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
               <div className="text-5xl md:text-6xl mb-6">🏆</div>
               <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
-                Compete & Earn
+                Compete & Earn Points
               </h3>
               <p className="text-gray-600 text-base md:text-lg leading-relaxed">
                 Climb leaderboards, earn achievements, and maintain streaks. See how you stack up against prompt engineers worldwide.
@@ -93,53 +93,77 @@ export default function LandingPage() {
             Try a Sample Challenge
           </h2>
 
-          <div className="bg-white p-8 md:p-12 rounded-2xl shadow-2xl border-l-4 border-[#6366F1]">
-            {/* Challenge Header */}
-            <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
-                Coffee Haiku
-              </h3>
-              <span className="px-5 py-2 bg-[#22C55E] text-white rounded-full text-sm font-bold shadow-md">
-                Beginner
-              </span>
-            </div>
-
-            {/* Challenge Content */}
-            <div className="space-y-5 text-gray-700 mb-8">
-              <p className="text-base md:text-lg">
-                <strong className="text-gray-900">Objective:</strong> Get the AI to write a haiku about coffee that follows the traditional 5-7-5 syllable pattern.
-              </p>
-
-              <p className="text-base md:text-lg">
-                <strong className="text-gray-900">Your Task:</strong> Craft a prompt that makes ChatGPT or Claude write a perfect haiku. It must have exactly 3 lines with 5, 7, and 5 syllables.
-              </p>
-
+            <div className="bg-gradient-to-br from-[#1F2937] to-[#111827] p-8 md:p-12 rounded-3xl shadow-2xl border-2 border-[#6366F1] relative overflow-hidden">
+            {/* Animated background elements */}
+            <div className="absolute top-0 right-0 w-40 h-40 bg-[#6366F1] rounded-full opacity-10 blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-40 h-40 bg-[#22C55E] rounded-full opacity-10 blur-3xl"></div>
+            
+            <div className="relative z-10">
+              {/* Challenge Header with Badge */}
+              <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
               <div>
-                <p className="text-base md:text-lg font-semibold text-gray-900 mb-2">
-                  Success Criteria:
+                <p className="text-[#22C55E] font-bold text-sm mb-2 tracking-widest">CHALLENGE #001</p>
+                <h3 className="text-3xl md:text-4xl font-black text-white">
+                💻 Simple Web Page 
+                </h3>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="px-4 py-2 bg-gradient-to-r from-[#22C55E] to-[#16A34A] text-white rounded-full text-sm font-bold shadow-lg">
+                Beginner
+                </span>
+                <div className="px-4 py-2 bg-[#6366F1] text-white rounded-full font-bold">
+                ⭐ 100 XP
+                </div>
+              </div>
+              </div>
+
+              {/* Challenge Content */}
+              <div className="space-y-6 mb-10">
+              <div className="bg-[#1F2937] border-l-4 border-[#6366F1] p-4 md:p-5 rounded-lg">
+                <p className="text-base md:text-lg text-gray-300">
+                <span className="text-[#22C55E] font-bold">🎯 OBJECTIVE:</span> Get the AI to write code for you to create a webpage that prints "PromptQuest" and has your name as the title.
                 </p>
-                <ul className="ml-6 space-y-2 text-base md:text-lg">
-                  <li className="flex items-start">
-                    <span className="text-[#22C55E] mr-2 font-bold">✓</span>
-                    <span>Correct syllable count (5-7-5)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#22C55E] mr-2 font-bold">✓</span>
-                    <span>Topic is clearly about coffee</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#22C55E] mr-2 font-bold">✓</span>
-                    <span>Sounds natural and poetic</span>
-                  </li>
+              </div>
+
+              <div className="bg-[#1F2937] border-l-4 border-[#FBBF24] p-4 md:p-5 rounded-lg">
+                <p className="text-base md:text-lg text-gray-300">
+                <span className="text-[#FBBF24] font-bold">⚔️ YOUR TASK:</span> Craft a prompt that makes ChatGPT or Claude write a html code for you. It must have title as your name and body should print "PromptQuest". The prompt should use less token and should be creative and concise.
+                </p>
+              </div>
+
+              <div className="bg-[#1F2937] border-l-4 border-[#EC4899] p-4 md:p-5 rounded-lg">
+                <p className="text-base md:text-lg font-bold text-[#EC4899] mb-3">
+                ✅ SUCCESS CRITERIA:
+                </p>
+                <ul className="space-y-2 text-base md:text-lg">
+                <li className="flex items-start text-gray-300">
+                  <span className="text-[#22C55E] mr-3 font-bold text-xl">→</span>
+                  <span>Prompt should use less than 20 tokens</span>
+                </li>
+                <li className="flex items-start text-gray-300">
+                  <span className="text-[#22C55E] mr-3 font-bold text-xl">→</span>
+                  <span>A simple html code with title and body tag</span>
+                </li>
                 </ul>
               </div>
-            </div>
+              </div>
 
-            {/* Points Badge */}
-            <div className="inline-block px-6 py-3 bg-linear-to-r from-[#FBBF24] to-[#F59E0B] text-gray-900 rounded-xl font-bold text-base shadow-md">
-              ⭐ 100 Points + Bonuses
+              {/* CTA Button */}
+                <div className="flex flex-wrap gap-4 items-center justify-center">
+                <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">
+                <button className="px-8 py-3 bg-linear-to-r from-[#6366F1] to-[#4F46E5] hover:from-[#4F46E5] hover:to-[#4338CA] text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-lg">
+                  Try it on ChatGPT
+                </button>
+                </a>
+                <a href="https://claude.ai" target="_blank" rel="noopener noreferrer">
+                <button className="px-8 py-3 bg-linear-to-r from-[#6366F1] to-[#4F46E5] hover:from-[#4F46E5] hover:to-[#4338CA] text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-lg">
+                  Try it on Claude
+                </button>
+                </a>
+              {/* <span className="text-gray-400 text-sm">~3 min average</span> */}
+              </div>
             </div>
-          </div>
+            </div>
 
           <p className="text-center mt-10 text-lg md:text-xl text-gray-600">
             This is just 1 of <strong className="text-[#6366F1] font-bold">500+ challenges</strong> across text, image, code, and creative prompting
